@@ -122,6 +122,12 @@ def change_list(b):
 
 print change_list(b)
 print b    #列表b的值发生变化
+
+#内置函数dir()：用来查询一个类或者对象所有属性
+print dir(list)
+
+#内置函数help()：用来查询的说明文档
+print help(list)
 ```
 
 ## 类（class）
@@ -156,10 +162,20 @@ objectname = Classname()
 
 #引用对象的属性
 objectname.attribute
+
+#list是一个类
+nl = [1,2,5,3,5]  #nl是类list的一个对象。
+print nl.count(5)       # 计数，看总共有多少个5
+print nl.index(3)       # 查询 nl 的第一个3的下标
+nl.append(6)            # 在 nl 的最后增添一个新元素6
+nl.sort()               # 对nl的元素排序
+print nl.pop()          # 从nl中去除最后一个元素，并将该元素返回。
+nl.remove(2)            # 从nl中去除第一个2
+nl.insert(0,9)          # 在下标为0的位置插入9
 ```
 
 说明：
 
 - name：当name为“object”时，表示该类没有父类；当name为父类名称时，则定义的为父类的子类，即子类继承父类(inheritance)，子类继承父类的所有属性和方法
 - self：类中定义的方法第一个参数必须为self，代表了根据类定义而创建的对象，可以通过self调用类的属性和方法。**可以通过对象修改类的属性值，但这很危险，类属性值的改变会影响类的所有对象**
-- 特殊方法：以“\_\_”开头的方法为特殊方法(special method)，\_\_init\_\_()特殊方法在创建对象时会自动调用该方法，此过程也叫初始化
+- 特殊方法：以“\_\_”开头的方法为特殊方法(special method)，\_\_init\_\_()特殊方法在创建对象时会自动调用该方法，此过程也叫初始化。运算符+、-、*等是特殊方法
