@@ -94,6 +94,7 @@ while condition:
 continue   # 在循环的某一次执行中，如果遇到continue, 那么跳过这一次执行，进行下一次的操作
 break      # 停止执行整个循环
 ```
+
 ## 函数
 ```python
 #函数定义
