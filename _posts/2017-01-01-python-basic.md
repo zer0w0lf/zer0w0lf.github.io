@@ -44,6 +44,14 @@ print(s1[2:0:-1])         # 从下标2到下标1
 #尾部元素引用
 print(s1[-1])             # 序列最后一个元素
 print(s1[-3])             # 序列倒数第三个元素
+
+#词典(dictionary)：包含有多个元素，每个元素包含键和值两部分，每个元素以逗号分隔。以不可变的对象作为键，如以字符串、数字或者真值来表示键，值可以是任意对象。键和值两者一一对应
+dic = {'tom':11, 'sam':57, 'lily':100}
+#词典的元素没有顺序，不能通过下标引用元素，词典是通过键来引用
+print dic['tom']
+dic['tom'] = 30    #修改词典元素
+dic['lilei'] = 99  #词典中增添一个新元素
+print dic
 ```
 
 ## 运算
@@ -85,6 +93,10 @@ else:
 #for循环：需要预先设定好循环的次数(n)，然后执行隶属于for的语句n次
 for element in sequence:   #每次从sequence中取出一个元素赋值给element，然后执行statement
     statement
+
+dic = {'lilei': 90, 'lily': 100, 'sam': 57, 'tom': 90}
+for key in dic:       #词典元素的循环调用，dict的每个键，被提取出来，赋予给key变量
+    print dic[key]
 
 #while循环：不停地循环执行隶属于它的语句，直到条件为假(False)
 while condition:
@@ -128,6 +140,14 @@ print dir(list)
 
 #内置函数help()：用来查询的说明文档
 print help(list)
+
+#词典对象常用方法
+print dic.keys()           # 返回dic所有的键
+print dic.values()         # 返回dic所有的值
+print dic.items()          # 返回dic所有的元素（键值对）
+dic.clear()                # 清空dic，dict变为{}
+del dic['tom']             # 删除 dic 的‘tom’元素，del是Python中保留的关键字，用于删除对象。
+print(len(dic))            # 可以用len()查询词典中的元素总数
 ```
 
 ## 类（class）
