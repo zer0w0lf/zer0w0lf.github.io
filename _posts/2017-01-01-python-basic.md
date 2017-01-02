@@ -70,6 +70,59 @@ print True or False                      # or, "或"运算， 其中之一为真
 print not True                           # not, “非”运算， 取反
 ```
 
+## 条件与循环
+```python
+#if条件语句：以四个空格的缩进来表示隶属关系, Python中不能随意缩进
+if  <条件1>:
+    statement
+elif <条件2>:
+    statement
+elif <条件3>:
+    statement
+else:
+    statement
+
+#for循环：需要预先设定好循环的次数(n)，然后执行隶属于for的语句n次
+for element in sequence:   #每次从sequence中取出一个元素赋值给element，然后执行statement
+    statement
+
+#while循环：不停地循环执行隶属于它的语句，直到条件为假(False)
+while condition:
+    statement
+
+#中断循环
+continue   # 在循环的某一次执行中，如果遇到continue, 那么跳过这一次执行，进行下一次的操作
+break      # 停止执行整个循环
+```
+## 函数
+```python
+#函数定义
+def function_name(para1, para2, para3):  #函数参数不是必须的
+    statement
+    return something  #return并不是必须的，当没有return, 或者return后面没有返回值时，函数将自动返回None。return可以返回多个值，以逗号分隔，如return a,b,c，相当于返回一个tuple(定值表)
+
+#函数调用：基本数据类型的参数通过值传递，不影响原来的变量；表类型的参数通过指针传递，影响原来的变量
+a = 1
+
+def change_integer(a):
+    a = a + 1
+    return a
+
+print change_integer(a)
+print a   #a的值为1，保持不变
+
+#===(Python中 "#" 后面跟的内容是注释，不执行 )
+
+b = [1,2,3]
+
+def change_list(b):
+    b[0] = b[0] + 1
+    return b
+
+print change_list(b)
+print b    #列表b的值发生变化
+```
+
 ## 类（class）
 
 类的定义及对象创建和属性引用如下：
