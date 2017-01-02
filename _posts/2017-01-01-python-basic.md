@@ -14,6 +14,21 @@ Python基础知识介绍，总结基本概念以及相应的注意点。
 ![](http://pic.58pic.com/58pic/12/40/48/158PICT58PICEQt.jpg)
 
 
+##数据类型
+
+```python
+#变量不需要事先声明，在赋值时自动确定类型
+a = 10
+
+#查看变量的类型使用type函数
+print(type(a))
+
+#基本数据类型
+a=10         # int 整数
+a=1.3        # float 浮点数
+a=True       # 真值 (True/False)
+a='Hello!'   # 字符串。字符串也可以用双引号。
+```
 
 
 ## 类（class）
