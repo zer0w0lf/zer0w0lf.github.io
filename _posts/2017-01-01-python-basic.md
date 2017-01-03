@@ -203,6 +203,7 @@ nl.insert(0,9)          # 在下标为0的位置插入9
 ## 模块
 
 一个.py文件就是一个模块，通过import模块的方式来调用对应模块的对象
+
 ```python
 import a                  # 引入模块a，使用a中的对象时需要使用a.
 import a as b             # 引入模块a，并将模块a重命名为b
@@ -216,6 +217,7 @@ python会在以下路径中搜索它想要寻找的模块：
 - 操作系统环境变量PYTHONPATH所包含的路径
 
 模块包：可以将功能相似的模块放在同一文件夹中，构成模块包。模块包文件夹中必须包含一个\_\_init\_\_.py的文件，提醒Python，该文件夹为一个模块包。\_\_init\_\_.py可以是一个空文件
+
 ```python
 import this_dir.module  # 引入this_dir文件夹中的module模块
 ```
