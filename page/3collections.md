@@ -280,7 +280,7 @@ Syntax Theme: Atom Dark or One Dark
 
 ## 安全博客
 
-* [shell-storm](http://shell-storm.org/)
+* [shell-storm](shell-storm.org)
 
 * [kitploit-PenTest Tools](http://www.kitploit.com/)
 
@@ -319,6 +319,7 @@ Syntax Theme: Atom Dark or One Dark
 * [Hack with GitHub(Twitter)](http://twitter.com/githacks)
 
 * [Binni Shah(Twitter)](http://twitter.com/binitamshah)
+
 ## Comments
 
 {% include comments.html %}
