@@ -274,6 +274,51 @@ Syntax Theme: Atom Dark or One Dark
 
     首页的卡片翻动效果非常赞。
 
+## 安全工具
+
+* [ctf-tools](https://github.com/zardus/ctf-tools)
+
+## 安全博客
+
+* [shell-storm](http://http://shell-storm.org/)
+
+* [kitploit-PenTest Tools](http://http://www.kitploit.com/)
+
+* [Pentest Geek](https://www.pentestgeek.com/)
+
+* [bugtraq](http://seclists.org/bugtraq/)
+
+* [Room362.com](https://room362.com/)
+
+* [PortSwigger Web Security](https://portswigger.net/)
+
+* [Project Zero](https://googleprojectzero.blogspot.com)
+
+* [Packet Storm](https://packetstormsecurity.com/)
+
+* [Pentestmag](https://pentestmag.com/)
+
+* [Pentest notes](http://http://dsrbr.blogspot.ru/)
+
+* [Reiners' Weblog](https://websec.wordpress.com/)
+
+* [Carnal0wnage & Attack ](http://http://carnal0wnage.attackresearch.com/)
+
+* [Darknet - The Darkside](http://http://www.darknet.org.uk/)
+
+* [Full Disclosure](http://seclists.org/fulldisclosure/)
+
+* [McGrew Security Blog](http://http://hornecyber.com/)
+
+* [Landing Proxify](http://http://www.gnucitizen.org/blog/landing-proxify/)
+
+## 安全推特
+
+* [Nicolas Krassas(Twitter)](http://twitter.com/Dinosn/)
+
+* [Hack with GitHub(Twitter)](http://twitter.com/githacks)
+
+* [Binni Shah(Twitter)](http://twitter.com/binitamshah)
 ## Comments
 
 {% include comments.html %}
