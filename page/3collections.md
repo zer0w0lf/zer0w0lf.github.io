@@ -280,9 +280,9 @@ Syntax Theme: Atom Dark or One Dark
 
 ## 安全博客
 
-* [shell-storm](http://http://shell-storm.org/)
+* [shell-storm](http://shell-storm.org/)
 
-* [kitploit-PenTest Tools](http://http://www.kitploit.com/)
+* [kitploit-PenTest Tools](http://www.kitploit.com/)
 
 * [Pentest Geek](https://www.pentestgeek.com/)
 
@@ -298,19 +298,19 @@ Syntax Theme: Atom Dark or One Dark
 
 * [Pentestmag](https://pentestmag.com/)
 
-* [Pentest notes](http://http://dsrbr.blogspot.ru/)
+* [Pentest notes](http://dsrbr.blogspot.ru/)
 
 * [Reiners' Weblog](https://websec.wordpress.com/)
 
-* [Carnal0wnage & Attack ](http://http://carnal0wnage.attackresearch.com/)
+* [Carnal0wnage & Attack ](http://carnal0wnage.attackresearch.com/)
 
-* [Darknet - The Darkside](http://http://www.darknet.org.uk/)
+* [Darknet - The Darkside](http://www.darknet.org.uk/)
 
 * [Full Disclosure](http://seclists.org/fulldisclosure/)
 
-* [McGrew Security Blog](http://http://hornecyber.com/)
+* [McGrew Security Blog](http://hornecyber.com/)
 
-* [Landing Proxify](http://http://www.gnucitizen.org/blog/landing-proxify/)
+* [Landing Proxify](http://www.gnucitizen.org/blog/landing-proxify/)
 
 ## 安全推特
 
