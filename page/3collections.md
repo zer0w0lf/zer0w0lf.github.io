@@ -57,25 +57,6 @@ type: page
 
 * [JavaScript 设计模式 系列 AlloyTeam](http://www.alloyteam.com/2012/10/common-javascript-design-patterns/)
 
-### ES2015
-
-- [https://tc39.github.io/ecma262/](https://tc39.github.io/ecma262/)
-* [http://www.ecma-international.org/ecma-262/6.0/](http://www.ecma-international.org/ecma-262/6.0/)
-
-    ES2015规范
-
-- [http://es6katas.org/](http://es6katas.org/)
-
-    Learn ES6 by doing it. Fix failing tests. Keep all learnings.
-
-* [30分钟掌握ES6/ES2015核心内容（上）](http://segmentfault.com/a/1190000004365693)
-
-* [30分钟掌握ES6/ES2015核心内容（下）](http://segmentfault.com/a/1190000004368132)
-
-* [《ECMAScript 6入门》 -阮一峰](https://github.com/ruanyf/es6tutorial)
-
-* [EcmaScript6 全规范（含node） -ouvens](https://github.com/ouvens/es6-code-style-guide)
-
 ### NodeJS
 
 * [七天学会NodeJS -Nanqiao Deng](https://nqdeng.github.io/7-days-nodejs)

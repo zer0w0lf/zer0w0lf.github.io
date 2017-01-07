@@ -13,7 +13,6 @@ Python基础知识介绍，总结基本概念以及相应的注意点。
 
 ![](http://pic.58pic.com/58pic/12/40/48/158PICT58PICEQt.jpg)
 
-
 ## 数据类型
 
 ```python
@@ -107,14 +106,15 @@ continue   # 在循环的某一次执行中，如果遇到continue, 那么跳过
 break      # 停止执行整个循环
 ```
 
-## 函数
+## 函数及调用
 ```python
-#函数定义
+# 函数定义
 def function_name(para1, para2, para3):  #函数参数不是必须的
     statement
     return something  #return并不是必须的，当没有return, 或者return后面没有返回值时，函数将自动返回None。return可以返回多个值，以逗号分隔，如return a,b,c，相当于返回一个tuple(定值表)
 
-#函数调用：基本数据类型的参数通过值传递，不影响原来的变量；表类型的参数通过指针传递，影响原来的变量
+# 函数调用：
+# 基本数据类型的参数通过值传递，不影响原来的变量；
 a = 1
 
 def change_integer(a):
@@ -124,7 +124,7 @@ def change_integer(a):
 print change_integer(a)
 print a   #a的值为1，保持不变
 
-#===(Python中 "#" 后面跟的内容是注释，不执行 )
+# 表类型的参数通过指针传递，影响原来的变量
 
 b = [1,2,3]
 
@@ -133,15 +133,57 @@ def change_list(b):
     return b
 
 print change_list(b)
-print b    #列表b的值发生变化
+print b    # 列表b的值发生变化
 
-#内置函数dir()：用来查询一个类或者对象所有属性
+# 关键字传递：根据每个参数的名字传递参数，关键字并不用遵守位置的对应关系
+def f(a,b,c):
+    return a+b+c
+
+print(f(c=3,b=2,a=1))
+
+# 参数默认值：定义函数时，可以给参数富裕默认值；调用时若没有传值，则使用默认值
+def f(a,b,c=10):
+    return a+b+c
+
+print(f(3,2))
+print(f(3,2,1))
+
+# 包裹传递：定义函数时，并不知道调用时会传递多少参数的情况，使用包裹传递
+# 包裹位置参数：
+def func(*name):  # 所有的参数被name收集，根据位置合并成一个元组(tuple)，name是包裹位置传递所用的元组名，在定义func时，在name前加*号
+    print type(name)
+    print name
+
+func(1,4,6)
+func(5,6,7,1,2,3)
+
+# 包裹关键字参数：
+def func(**dict):  # dict是一个字典，收集所有的关键字，传递给函数func。参数dict是包裹关键字传递所用的字典，在dict前加**
+    print type(dict)
+    print dict
+
+func(a=1,b=9)
+func(m=2,n=1,c=11)
+
+#解包裹：调用时，使用*或**解包裹
+def func(a,b,c):
+    print a,b,c
+
+args = (1,3,4)
+func(*args)   # 在传递tuple时，让tuple的每一个元素对应一个位置参数
+
+dict = {'a':1,'b':2,'c':3}
+func(**dict)  # 在传递词典dict时，让词典的每个键值对作为一个关键字传递给func
+
+#混合传递：基本原则是，先位置，再关键字，再包裹位置，再包裹关键字
+
+# 内置函数dir()：用来查询一个类或者对象所有属性
 print dir(list)
 
-#内置函数help()：用来查询的说明文档
+# 内置函数help()：用来查询的说明文档
 print help(list)
 
-#词典对象常用方法
+# 词典对象常用方法
 print dic.keys()           # 返回dic所有的键
 print dic.values()         # 返回dic所有的值
 print dic.items()          # 返回dic所有的元素（键值对）
