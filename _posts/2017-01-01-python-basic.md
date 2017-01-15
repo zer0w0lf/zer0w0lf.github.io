@@ -99,31 +99,44 @@ a = a + 2    # 对引用a重新赋值，让a指向一个新的对象7
 
 ## 运算
 
+数学运算
+
 ```python
-#数学运算
 print 1+9        # 加法
 print 1.3-4      # 减法
 print 3*5        # 乘法
 print 4.5/1.5    # 除法
 print 3**2       # 乘方     
 print 10%3       # 求余数
+```
 
-#判断：判断是真还是假，返回True/False
+判断：判断是真还是假，返回True/False
+
+```python
 print 5==6               # ==， 相等
 print 8.0!=8.0           # !=, 不等
 print 3<3, 3<=3          # <, 小于; <=, 小于等于
 print 4>5, 4>=0          # >, 大于; >=, 大于等于
 print 5 in [1,3,5]       # 5是list [1,3,5]的一个元素
+```
 
-#逻辑运算：True/False之间的运算
+逻辑运算：True/False之间的运算
+
+```python
 print True and True, True and False      # and, “与”运算， 两者都为真才是真
 print True or False                      # or, "或"运算， 其中之一为真即为真
 print not True                           # not, “非”运算， 取反
 ```
 
+***
+
 ## 条件与循环
+
+### if条件语句
+
+以四个空格的缩进来表示隶属关系, Python中不能随意缩进
+
 ```python
-#if条件语句：以四个空格的缩进来表示隶属关系, Python中不能随意缩进
 if  <条件1>:
     statement
 elif <条件2>:
@@ -132,56 +145,92 @@ elif <条件3>:
     statement
 else:
     statement
+```
 
-#for循环：需要预先设定好循环的次数(n)，然后执行隶属于for的语句n次
-for element in sequence:   #每次从sequence中取出一个元素赋值给element，然后执行statement
+### for循环
+
+需要预先设定好循环的次数(n)，然后执行隶属于for的语句n次
+
+```python
+for element in sequence:   # 每次从sequence中取出一个元素赋值给element，然后执行statement
     statement
 
 dic = {'lilei': 90, 'lily': 100, 'sam': 57, 'tom': 90}
-for key in dic:       #词典元素的循环调用，dict的每个键，被提取出来，赋予给key变量
+for key in dic:       # 词典元素的循环调用，dict的每个键，被提取出来，赋予给key变量
     print dic[key]
+```
 
-# 利用enumerate()函数，可以在每次循环中同时得到下标和元素，返回的是一个包含两个元素的定值表(tuple)，两个元素分别赋予index和char
+利用enumerate()函数，可以在每次循环中同时得到下标和元素，返回的是一个包含两个元素的定值表(tuple)，两个元素分别赋予index和char
+
+```python
 S = 'abcdefghijk'
 for (index,char) in enumerate(S):
     print index
     print char
+```
 
-#zip()函数从多个列表中，依次各取出一个元素。合并成的元组放入zip()返回的列表中。每次循环时，从各个序列分别从左到右取出一个元素，合并成一个tuple，然后tuple的元素赋予给a,b,c
+zip()函数从多个列表中，依次各取出一个元素。合并成的元组放入zip()返回的列表中。每次循环时，从各个序列分别从左到右取出一个元素，合并成一个tuple，然后tuple的元素赋予给a,b,c
+
+```python
 ta = [1, 2, 3]
 tb = [9, 8, 7]
 tc = ['a', 'b', 'c']
 for (a, b, c) in zip(ta, tb, tc):
     print(a, b, c)
+```
 
-#while循环：不停地循环执行隶属于它的语句，直到条件为假(False)
+### while循环
+
+不停地循环执行隶属于它的语句，直到条件为假(False)
+
+```python
 while condition:
     statement
+```
 
-#中断循环
+### 中断循环
+
+```python
 continue   # 在循环的某一次执行中，如果遇到continue, 那么跳过这一次执行，进行下一次的操作
 break      # 停止执行整个循环
+```
 
-#循环对象：open()返回的实际上是一个循环对象，包含有next()方法，当一个循环结构（比如for）调用循环对象时，它就会每次循环的时候调用next()方法，直到StopIteration出现
+### 循环对象
+
+open()返回的实际上是一个循环对象，包含有next()方法，当一个循环结构（比如for）调用循环对象时，它就会每次循环的时候调用next()方法，直到StopIteration出现
+
+```python
 for line in open('test.txt'):
     print line
+```
 
-#生成器(generator)：构成一个用户自定义的循环对象。生成器的编写方法和函数定义类似，只是在return的地方改为yield。生成器中可以有多个yield。当生成器遇到一个yield时，会暂停运行生成器，返回yield后面的值。当再次调用生成器的时候，会从刚才暂停的地方继续运行，直到下一个yield
+### 生成器(generator)
+
+构成一个用户自定义的循环对象。生成器的编写方法和函数定义类似，只是在return的地方改为yield。生成器中可以有多个yield。当生成器遇到一个yield时，会暂停运行生成器，返回yield后面的值。当再次调用生成器的时候，会从刚才暂停的地方继续运行，直到下一个yield
+
+```python
 def gen():
     a = 100
     yield a
     a = a*8
     yield a
     yield 1000
-
-# 生成器表达式(Generator Expression)：G = (x for x in range(4))
-
-#表推导(list comprehension)：快速生成表的方法
-L = [x**2 for x in range(10)]
-
 ```
 
+生成器表达式(Generator Expression)：G = (x for x in range(4))
+
+### 表推导(list comprehension)
+
+快速生成表的方法
+
+```python
+L = [x**2 for x in range(10)]
+```
+
+***
+
 ## 函数及调用
+
 ```python
 # 函数定义
 def function_name(para1, para2, para3):  #函数参数不是必须的
