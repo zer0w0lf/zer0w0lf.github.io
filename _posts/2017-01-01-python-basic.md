@@ -221,6 +221,35 @@ print dic.items()          # 返回dic所有的元素（键值对）
 dic.clear()                # 清空dic，dict变为{}
 del dic['tom']             # 删除 dic 的‘tom’元素，del是Python中保留的关键字，用于删除对象。
 print(len(dic))            # 可以用len()查询词典中的元素总数
+
+# 函数对象：具有属性、赋值给其他对象名，或作为参数传递
+# lambda生成一个函数对象
+func = lambda x,y: x + y
+print func(3,4)
+
+# 函数可以作为一个对象，进行参数传递
+def test(f, a, b):
+    print 'test'
+    print f(a, b)
+
+test(func, 3, 5)
+
+# map()为python内置函数，第一个参数为函数对象，功能是将函数对象依次作用于表的每一个元素，每次作用的结果储存于返回的表中
+# 在Python 3.X中，map()的返回值是一个循环对象。可以利用list()函数，将该循环对象转换成表
+re = map((lambda x,y: x+y),[1,2,3],[6,7,9])
+
+# filter函数的第一个参数也是一个函数对象。它也是将作为参数的函数对象作用于多个元素。如果函数对象返回的是True，则该次的元素被储存于返回的表中。filter通过读入的函数来筛选数据。同样，在Python 3.X中，filter返回的不是表，而是循环对象
+def func(a):
+    if a > 100:
+        return True
+    else:
+        return False
+
+print filter(func,[10,56,101,500])
+
+# reduce函数的第一个参数也是函数，但有一个要求，就是这个函数自身能接收两个参数。reduce可以累进地将函数作用于各个参数
+print reduce((lambda x,y: x+y),[1,2,5,7,9])
+# reduce将表中的前两个元素(1和2)传递给lambda函数，得到3。该返回值(3)将作为lambda函数的第一个参数，而表中的下一个元素(5)作为lambda函数的第二个参数，进行下一次的对lambda函数的调用，得到8
 ```
 
 ## 类（class）
