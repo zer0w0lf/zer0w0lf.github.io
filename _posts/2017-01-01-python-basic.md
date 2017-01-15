@@ -396,10 +396,9 @@ print reduce((lambda x,y: x+y),[1,2,5,7,9])
 
 ## 类（class）
 
-类的定义及对象创建和属性引用如下：
+### 类的定义
 
 ```python
-#类的定义
 class Classname(name):
     #属性
     attribute1 = "xxx"
@@ -420,15 +419,21 @@ class Classname(name):
         print self.attribute1
     def method4(self):
         self.method3
+```
 
-#创建对象
+### 创建对象
+
+```python
 objectname = Classname()
+```
 
-#引用对象的属性
+### 引用对象的属性
+
+```python
 objectname.attribute
 
 #list是一个类
-nl = [1,2,5,3,5]  #nl是类list的一个对象。
+nl = [1,2,5,3,5]        # nl是类list的一个对象。
 print nl.count(5)       # 计数，看总共有多少个5
 print nl.index(3)       # 查询 nl 的第一个3的下标
 nl.append(6)            # 在 nl 的最后增添一个新元素6
@@ -469,14 +474,19 @@ import this_dir.module  # 引入this_dir文件夹中的module模块
 ## 文本文件的输入输出
 
 创建文件对象：
-f = open(文件名，模式)    #打开一个文件，并使用一个对象来表示该文件，最常用的模式有，"r"（只读），“w”（写入）
+
+```python
+f = open(文件名，模式) 
+```
+
+打开一个文件，并使用一个对象来表示该文件，最常用的模式有，"r"（只读），“w”（写入）
 
 ```python
 f = open("test.txt","r")
 ```
 
 ```python
-#文件对象的方法
+# 文件对象的方法
 content = f.read(N)          # 读取N bytes的数据
 content = f.readline()       # 读取一行
 content = f.readlines()      # 读取所有行，储存在列表中，每个元素是一行。
