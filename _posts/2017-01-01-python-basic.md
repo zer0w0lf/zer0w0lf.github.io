@@ -343,6 +343,7 @@ f.write('I like apple')      # 将'I like apple'写入文件
 
 f.close()                    # 关闭文件
 ```
+
 ## 异常处理
 
 异常处理完整语法结构：
