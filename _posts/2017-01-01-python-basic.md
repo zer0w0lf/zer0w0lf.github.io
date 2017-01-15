@@ -343,3 +343,34 @@ f.write('I like apple')      # 将'I like apple'写入文件
 
 f.close()                    # 关闭文件
 ```
+## 异常处理
+
+异常处理完整语法结构：
+```python
+try:
+    ...
+except exception1:
+    ...
+except exception2:
+    ...
+except:
+    ...
+else:
+    ...
+finally:
+    ...
+```
+如果try中有异常发生时，将执行异常的归属，执行except。异常层层比较，看是否是exception1, exception2...，直到找到其归属，执行相应的except中的语句。如果except后面没有任何参数，那么表示所有的exception都交给这段程序处理。如果try中没有异常，那么except部分将跳过，执行else中的语句。finally是无论是否有异常，最后都要做的一些事情。
+
+整个流程如下：
+* try->异常->except->finally
+* try->无异常->else->finally
+
+抛出异常：使用raise exception
+
+```python
+print 'Lalala'
+raise StopIteration
+print 'Hahaha
+```
+
