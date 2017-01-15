@@ -367,7 +367,7 @@ finally:
 
 整个流程如下：
 
-- try->异常->except->finally
+- try\-\>异常\-\>except\-\>finally
 - try->无异常->else->finally
 
 抛出异常：使用raise exception
