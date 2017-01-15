@@ -97,6 +97,19 @@ dic = {'lilei': 90, 'lily': 100, 'sam': 57, 'tom': 90}
 for key in dic:       #词典元素的循环调用，dict的每个键，被提取出来，赋予给key变量
     print dic[key]
 
+# 利用enumerate()函数，可以在每次循环中同时得到下标和元素，返回的是一个包含两个元素的定值表(tuple)，两个元素分别赋予index和char
+S = 'abcdefghijk'
+for (index,char) in enumerate(S):
+    print index
+    print char
+
+#zip()函数从多个列表中，依次各取出一个元素。合并成的元组放入zip()返回的列表中。每次循环时，从各个序列分别从左到右取出一个元素，合并成一个tuple，然后tuple的元素赋予给a,b,c
+ta = [1, 2, 3]
+tb = [9, 8, 7]
+tc = ['a', 'b', 'c']
+for (a, b, c) in zip(ta, tb, tc):
+    print(a, b, c)
+
 #while循环：不停地循环执行隶属于它的语句，直到条件为假(False)
 while condition:
     statement
@@ -104,8 +117,25 @@ while condition:
 #中断循环
 continue   # 在循环的某一次执行中，如果遇到continue, 那么跳过这一次执行，进行下一次的操作
 break      # 停止执行整个循环
-```
 
+#循环对象：open()返回的实际上是一个循环对象，包含有next()方法，当一个循环结构（比如for）调用循环对象时，它就会每次循环的时候调用next()方法，直到StopIteration出现
+for line in open('test.txt'):
+    print line
+
+#生成器(generator)：构成一个用户自定义的循环对象。生成器的编写方法和函数定义类似，只是在return的地方改为yield。生成器中可以有多个yield。当生成器遇到一个yield时，会暂停运行生成器，返回yield后面的值。当再次调用生成器的时候，会从刚才暂停的地方继续运行，直到下一个yield
+def gen():
+    a = 100
+    yield a
+    a = a*8
+    yield a
+    yield 1000
+
+# 生成器表达式(Generator Expression)：G = (x for x in range(4))
+
+#表推导(list comprehension)：快速生成表的方法
+L = [x**2 for x in range(10)]
+
+```
 ## 函数及调用
 ```python
 # 函数定义
