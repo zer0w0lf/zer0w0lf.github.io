@@ -19,7 +19,6 @@ Python进阶知识总结。
 
 ```python
 'abc' + 'xyz'               # 连接字符串
-
 # 以上运算符实际执行以下操作
 'abc'.__add__('xyz')
 ```
@@ -28,7 +27,6 @@ Python进阶知识总结。
 
 ```python
 len([1,2,3])      # 返回表中元素的总数
-
 # 实际上执行如下操作
 [1,2,3].__len__()
 ```
@@ -76,7 +74,6 @@ print(f.closed)
 
 ```python
 # customized object
-
 class VOW(object):
     def __init__(self, text):
         self.text = text
