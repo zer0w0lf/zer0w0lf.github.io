@@ -20,3 +20,9 @@ author: zer0w0lf
 | x|y      | 匹配 x 或 y。例如，'z|food' 能匹配 "z" 或 "food"。'(z|f)ood' 则匹配 "zood" 或 "food"。    |
 | [xyz]    | 字符集合。匹配所包含的任意一个字符。例如， '[abc]' 可以匹配 "plain" 中的 'a'。            |
 
+***
+
+[Python标准库01 正则表达式](http://www.cnblogs.com/vamei/archive/2012/08/31/2661870.html)
+[深入理解正则表达式](http://www.cnblogs.com/China3S/archive/2013/11/30/3451971.html)
+[正则表达式全部符号解释](http://www.cnblogs.com/yirlin/archive/2006/04/12/373222.html)
+
