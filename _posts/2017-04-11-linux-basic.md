@@ -21,9 +21,9 @@ Linux基础知识介绍，总结基本概念以及相应的注意点。
 ## man page(操作说明)
 
 - man 7 man: 可以参考man命令详细的说明，特别是每个命令的数字解释
-  > /string 向下查询string字符串
-  > ?string 向上查询string字符串
-  > n N 结合以上两个命令向上或向下查询
+  > * /string 向下查询string字符串
+  > * ?string 向上查询string字符串
+  > * n N 结合以上两个命令向上或向下查询
 - man -f man：取得更多与man相关的信息
 - man -k man：在系统说明文件中，只要有man关键字的就将该说明列出来
 
